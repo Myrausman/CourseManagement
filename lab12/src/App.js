@@ -1,6 +1,7 @@
  import './App.css';
 import { Home } from './Home';
-import { TimeSlot } from './TimeSlot'; import { Course } from './Course';
+import { TimeSlot } from './TimeSlot';
+import Course from './Course';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 
 

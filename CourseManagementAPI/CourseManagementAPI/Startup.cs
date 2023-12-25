@@ -1,29 +1,61 @@
-﻿using CourseManagementAPI.Models;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using CourseManagementAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-public class Startup
+namespace CourseManagementAPI
 {
-    // Other using statements...
-
-    public void ConfigureServices(IServiceCollection services)
+    public class Startup
     {
-        // In ConfigureServices method
-        services.AddCors(options =>
+        private readonly IConfiguration _configuration;
+
+        public Startup(IConfiguration configuration)
         {
-            options.AddPolicy("AllowReactApp",
-                builder => builder.WithOrigins("http://localhost:3000")
-                                  .AllowAnyHeader()
-                                  .AllowAnyMethod());
-        });
+            _configuration = configuration;
+        }
 
-        // other configurations...
-    }
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    builder => builder.WithOrigins("http://localhost:3000")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod());
+            });
 
-    public void Configure(IApplicationBuilder app)
-    {
-        // In Configure method
-        app.UseCors("AllowReactApp");
-        // other configurations...
+            // other configurations...
+
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
+            services.AddDbContext<CourseContext>(options => options.UseSqlServer(_configuration.GetConnectionString("dbconn")));
+            services.AddDbContext<TimeSlotContext>(options => options.UseSqlServer(_configuration.GetConnectionString("dbconn")));
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseCors("AllowReactApp");
+
+            if (env.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            // other configurations...
+
+            app.UseHttpsRedirection();
+            app.UseAuthorization();
+
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
     }
 }

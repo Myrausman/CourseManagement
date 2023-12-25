@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5VMgg3ft/ShqwNA0fThUXU4UKIjD+GYA72lCbpVEt+etg4bHYCfUzAunM1AyrBiVxycGH/oKv+Eql8P5htpang==",
+  "dgSpecHash": "xojcRpfuhb6sTgXZ3i8oqmFsw0TkbA+fLyFGc4x/+XNPTyO/hbV7KGFI2sUXBRXVy7jk09h7BpE2MbKIsNDE8Q==",
   "success": true,
-  "projectFilePath": "E:\\reactil\\CourseManagement\\lab12\\CourseManagementAPI\\CourseManagementAPI\\CourseManagementAPI.csproj",
+  "projectFilePath": "E:\\reactil\\CourseManagementAPI\\CourseManagementAPI\\CourseManagementAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

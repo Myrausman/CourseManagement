@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CourseManagementAPI.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace CourseManagementAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowReactApp")]
     public class CoursesController : ControllerBase
     {
         private readonly CourseContext _context;

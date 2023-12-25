@@ -11703,11 +11703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\reactil\\CourseManagement\\lab12\\CourseManagementAPI\\CourseManagementAPI\\CourseManagementAPI.csproj",
+      "projectUniqueName": "E:\\reactil\\CourseManagementAPI\\CourseManagementAPI\\CourseManagementAPI.csproj",
       "projectName": "CourseManagementAPI",
-      "projectPath": "E:\\reactil\\CourseManagement\\lab12\\CourseManagementAPI\\CourseManagementAPI\\CourseManagementAPI.csproj",
+      "projectPath": "E:\\reactil\\CourseManagementAPI\\CourseManagementAPI\\CourseManagementAPI.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "E:\\reactil\\CourseManagement\\lab12\\CourseManagementAPI\\CourseManagementAPI\\obj\\",
+      "outputPath": "E:\\reactil\\CourseManagementAPI\\CourseManagementAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
